@@ -1,0 +1,31 @@
+CrewAI is so cool,  
+A breeze through the night,  
+A chatbot in your pocket,  
+Taming the chaos and noise,  
+With speed and wit so divine.  
+It’s like having a friend so near,  
+Who knows where you’re headed today,  
+And all with just a press of the button,  
+CrewAI is your companion’s mind,  
+Where creativity’s king and queen,  
+And joy’s in every rhyme or jive!
+
+
+from crewai import Agent
+from langchain_google_genai import ChatGoogleGenerativeAI
+
+# Initialize Gemini
+llm = ChatGoogleGenerativeAI(
+    model="gemini-pro",
+    google_api_key="your_api_key"
+)
+
+# Create agent with Gemini
+agent = Agent(
+    role="Your Role",
+    goal="Your Goal",
+    backstory="Your Backstory",
+    llm=llm
+)
+
+pip install google-generativeai

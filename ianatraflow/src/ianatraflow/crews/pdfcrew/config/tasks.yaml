@@ -1,0 +1,45 @@
+summarize_task:
+  description: Create a structured, concise summary of the provided PDF document
+  expected_output: |
+    A hierarchical outline or narrative summary covering:
+      1. Introduction and objectives
+      2. Major sections or chapters with their key points
+      3. Conclusions and recommendations
+  agent: pdf_summarizer
+
+key_points_task:
+  description: Extract and enumerate the critical insights and highlights from the PDF
+  expected_output: |
+    1. Insight or finding #1
+    2. Insight or finding #2
+    3. …etc.
+  agent: insight_extractor
+
+flashcards_task:
+  description: Generate a set of study flashcards based on the PDF content
+  expected_output: >
+    JSON array of objects, e.g.:
+    [
+      { "question": "What is X?", "answer": "X is…" },
+      { "question": "How does Y work?", "answer": "Y works by…" }
+    ]
+  agent: educational_content_creator
+
+quiz_generator_task:
+  description: Produce a quiz (varied question types) that tests understanding of the PDF
+  expected_output: >
+    JSON array of objects, e.g.:
+    [
+      {
+        "type": "multiple-choice",
+        "question": "Which of the following…?",
+        "options": ["A", "B", "C", "D"],
+        "answer": "B"
+      },
+      {
+        "type": "true-false",
+        "question": "Statement…?",
+        "answer": "True"
+      }
+    ]
+  agent: assessment_specialist

@@ -1,0 +1,5 @@
+# tasks.yaml
+formalize_task:
+  description: Convert the simple request and task do apply on {context} based on {request} into a understanble task for the other agents
+  expected_output:  a clear and easy to understand instruction on what {request} should do to {context}  
+  agent: input_formalizer
